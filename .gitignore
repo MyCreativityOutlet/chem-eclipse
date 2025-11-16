@@ -1,0 +1,6 @@
+src/chem_eclipse/data/
+src/chem_eclipse/results/
+*.pkl
+data/
+.idea/
+results/
