@@ -24,9 +24,12 @@ jobs:
       - name: Build
         run: uv build
       # Check that basic features work and we didn't miss to include crucial files
+      - name: Find wheel file
+        id: find_wheel
+        run: |
+          WHEEL=$(ls dist/*.whl)
+          echo "wheel=$WHEEL" >> $GITHUB_OUTPUT
       - name: Import test (wheel)
-        run: uv run --isolated --no-project --with dist/*.whl[cpu] tests/test_importing.py
-      - name: Import test (source distribution)
-        run: uv run --isolated --no-project --with dist/*.tar.gz[cpu] tests/test_importing.py
+        run: uv run --isolated --no-project --with "${{ steps.find_wheel.outputs.wheel }}[cpu]" tests/test_importing.py
       - name: Publish
         run: uv publish
