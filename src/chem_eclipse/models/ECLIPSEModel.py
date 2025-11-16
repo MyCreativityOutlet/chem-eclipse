@@ -11,7 +11,7 @@ from tqdm import tqdm
 from rdkit import Chem, RDLogger
 from rdkit.Chem import rdFingerprintGenerator
 import joblib
-from hiclass.MultiLabelLocalClassifierPerNode import MultiLabelLocalClassifierPerNode
+from chem_eclipse.hiclass.MultiLabelLocalClassifierPerNode import MultiLabelLocalClassifierPerNode
 from xgboost import XGBClassifier
 from chem_eclipse.utils import hierarchy_eclipse_eval, sort_recall_precision, plot_pr_curve, convert_eclipse_type
 

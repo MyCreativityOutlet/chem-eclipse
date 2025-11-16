@@ -16,7 +16,6 @@ classifiers = [
 ]
 
 dependencies = [
-  "hiclass @ git+https://github.com/MyCreativityOutlet/hiclass.git",
   "scikit-learn<1.5.0",
   "xgboost~=3.0.5",
   "rdkit~=2024.9.6",

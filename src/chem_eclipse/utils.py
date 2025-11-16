@@ -14,7 +14,7 @@ from argparse import ArgumentParser
 import pandas as pd
 import json
 from statistics import mean
-from hiclass import metrics
+from chem_eclipse.hiclass import metrics
 import matplotlib.pyplot as plt
 import os
 from enviPath_python.enviPath import enviPath
